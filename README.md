@@ -36,3 +36,13 @@ This project is a simple social media platform built with **Spring Boot** for th
    ```bash
    git clone <repository-url>
    cd backend
+
+# update application.properties
+2. spring.datasource.url=jdbc:mysql://localhost:3306/social_media_db
+spring.datasource.username=root
+spring.datasource.password=root
+
+# frontend 
+npm install
+npm run
+
