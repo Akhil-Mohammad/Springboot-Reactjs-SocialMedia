@@ -41,6 +41,6 @@ public class PostsServiceImpl implements PostsService {
 
     @Override
     public List<Posts> getAllPosts() {
-        return null;
+        return postsRepository.findAll();
     }
 }
