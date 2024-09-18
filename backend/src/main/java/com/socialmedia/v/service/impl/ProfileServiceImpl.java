@@ -1,23 +1,22 @@
-package com.socialmedia.v.service.util;
+package com.socialmedia.v.service.impl;
 
 import com.socialmedia.v.entity.Profile;
 import com.socialmedia.v.repository.ProfileRepository;
 import com.socialmedia.v.service.ProfileService;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
 @Service
-public class ProfileServiceUtil implements ProfileService {
+public class ProfileServiceImpl implements ProfileService {
 
 
 
     private ProfileRepository profileRepository;
 
-    public ProfileServiceUtil(ProfileRepository profileRepository) {
+    public ProfileServiceImpl(ProfileRepository profileRepository) {
         this.profileRepository = profileRepository;
     }
 

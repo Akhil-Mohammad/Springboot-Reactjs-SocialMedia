@@ -1,9 +1,7 @@
 package com.socialmedia.v.controller;
 
 import com.socialmedia.v.entity.Profile;
-import com.socialmedia.v.service.util.ProfileServiceUtil;
-import org.apache.coyote.Response;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.socialmedia.v.service.impl.ProfileServiceImpl;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -15,9 +13,9 @@ import java.util.List;
 public class ProfileController {
 
 
-    private final ProfileServiceUtil profileServiceUtil;
+    private final ProfileServiceImpl profileServiceUtil;
 
-    public ProfileController(ProfileServiceUtil profileServiceUtil) {
+    public ProfileController(ProfileServiceImpl profileServiceUtil) {
         this.profileServiceUtil = profileServiceUtil;
     }
 
