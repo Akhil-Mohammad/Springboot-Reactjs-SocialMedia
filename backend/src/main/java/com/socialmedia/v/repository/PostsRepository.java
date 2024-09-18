@@ -1,4 +1,8 @@
 package com.socialmedia.v.repository;
 
-public interface PostsRepository {
+import com.socialmedia.v.entity.Posts;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface PostsRepository extends JpaRepository<Posts, String> {
+
 }

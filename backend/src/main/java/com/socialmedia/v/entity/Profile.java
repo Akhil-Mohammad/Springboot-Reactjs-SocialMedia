@@ -1,27 +1,28 @@
 package com.socialmedia.v.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Temporal;
-import jakarta.persistence.TemporalType;
+import jakarta.persistence.*;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 public class Profile {
-
 
     @Id
     private String id;
 
     private String fullName;
 
+    @Column(unique = true, nullable = false)
     private String username;
 
     private String image;
 
     @Temporal(TemporalType.DATE)
     private Date dob;
+
+    @OneToMany(mappedBy = "profileId", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Posts> posts;
 
 
 

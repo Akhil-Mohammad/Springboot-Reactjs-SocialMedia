@@ -23,6 +23,8 @@ public class ProfileServiceImpl implements ProfileService {
     @Override
     public Profile create(Profile profile) {
 
+
+
         if(profileRepository.existsByUsername(profile.getUsername())){
             throw  new IllegalArgumentException("UserName Already Exists: "+ profile.getUsername());
         }
