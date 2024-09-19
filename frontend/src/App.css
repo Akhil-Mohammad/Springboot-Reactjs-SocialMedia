@@ -36,3 +36,8 @@
     transform: rotate(360deg);
   }
 }
+
+
+.search-input {
+  width: 50px; /* Adjust width as needed */
+}

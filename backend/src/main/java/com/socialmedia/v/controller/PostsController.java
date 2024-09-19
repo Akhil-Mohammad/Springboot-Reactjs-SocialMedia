@@ -20,7 +20,6 @@ public class PostsController {
 
     @PostMapping("/newPost")
     public ResponseEntity<Posts> createPost(@RequestBody Posts posts){
-
         Posts createdPost = postsServiceImpl.createPost(posts.getProfileId(), posts);
         return ResponseEntity.status(HttpStatus.CREATED).body(createdPost);
     }
@@ -30,5 +29,7 @@ public class PostsController {
     public ResponseEntity<List<Posts>> getAllPosts(){
         return ResponseEntity.status(HttpStatus.OK).body(postsServiceImpl.getAllPosts());
     }
+
+
 
 }
