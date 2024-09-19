@@ -10,4 +10,6 @@ public interface PostsService {
 
     public List<Posts> getAllPosts();
 
+    public List<Posts> getPostsByProfileId(String profileId);
+
     }

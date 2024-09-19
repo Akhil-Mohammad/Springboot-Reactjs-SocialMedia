@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/posts")
@@ -25,11 +26,15 @@ public class PostsController {
     }
 
 
-    @GetMapping("/GetAllPosts")
+    @GetMapping("/getAllPosts")
     public ResponseEntity<List<Posts>> getAllPosts(){
         return ResponseEntity.status(HttpStatus.OK).body(postsServiceImpl.getAllPosts());
     }
 
 
+    @GetMapping("/getByProfileId")
+    public ResponseEntity<List<Posts>> getById(@RequestParam String profileId){
+        return ResponseEntity.status(HttpStatus.OK).body(postsServiceImpl.getPostsByProfileId(profileId));
+    }
 
 }

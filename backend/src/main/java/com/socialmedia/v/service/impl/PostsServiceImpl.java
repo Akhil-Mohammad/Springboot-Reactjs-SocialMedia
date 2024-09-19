@@ -8,7 +8,6 @@ import com.socialmedia.v.service.PostsService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.UUID;
 
 
@@ -42,5 +41,17 @@ public class PostsServiceImpl implements PostsService {
     @Override
     public List<Posts> getAllPosts() {
         return postsRepository.findAll();
+    }
+
+    @Override
+    public List<Posts> getPostsByProfileId(String profileId) {
+
+        List<Posts> posts =  postsRepository.findByProfileId(profileId);
+
+        if(posts.isEmpty()){
+            throw new IllegalArgumentException("No Posts for given ProfileID");
+        }
+
+        return posts;
     }
 }
